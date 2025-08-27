@@ -25,7 +25,6 @@ for i, color in ipairs(colorNames) do
         :setBackground(colorMap[color] and colors[color] or colors.gray)
         :onClick(function(self)
             colorMap[color] = not colorMap[color]
-            -- Send rednet message to server to toggle cable state
             rednet.send(serverId, {color=color, state=colorMap[color]})
             self:setBackground(colorMap[color] and colors[color] or colors.gray)
         end)
