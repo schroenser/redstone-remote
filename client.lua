@@ -20,7 +20,7 @@ main:setSize(26, 20):setPosition(1, 1)
 for i, color in ipairs(colorNames) do
     local btn = main:addButton()
         :setText(labels[color])
-        :setPosition(2, i)
+        :setPosition(8, i + 2)
         :setSize(10, 1)
         :setBackground(colorMap[color] and colors[color] or colors.gray)
         :onClick(function(self)
