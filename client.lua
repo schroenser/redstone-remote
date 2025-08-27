@@ -1,4 +1,8 @@
-local serverId = 1
+local serverId = ...
+if serverId == nil then
+    print("Usage: startup <serverId>")
+    return
+end
 
 local colors = _G.colors
 local basalt = require("basalt")
