@@ -1,6 +1,6 @@
-local serverId = ...
+local serverId = tonumber(...)
 if serverId == nil then
-    print("Usage: startup <serverId>")
+    print("Usage: startup <serverId> (serverId must be a number)")
     return
 end
 
