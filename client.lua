@@ -7,7 +7,7 @@ local colorMap = {}
 
 rednet.open("back")
 
-for i, color in ipairs(colorNames) do
+for _, color in ipairs(colorNames) do
     colorMap[color] = false
 end
 

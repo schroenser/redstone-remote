@@ -5,7 +5,7 @@ rednet.open(modemSide)
 
 print("Server started. Waiting for cable toggle commands...")
 while true do
-    local id, msg = rednet.receive()
+    local _, msg = rednet.receive()
     if type(msg) == "table" and msg.color and msg.state ~= nil then
         local currentMask = redstone.getBundledOutput(bundledCableSide)
         local colorValue = colors[msg.color]
